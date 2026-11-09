@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhim Majhi</title>
+
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/images/logo.png?v=1000">
+  <link rel="shortcut icon" href="favicon.ico?v=1000">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png?v=1000">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="particles-bg" aria-hidden="true"></canvas>
+<div class="premium-aura" aria-hidden="true"></div>
+<div class="premium-aura-2" aria-hidden="true"></div>
+
+    <div class="glow-orb"></div>
+    <div class="glow-orb-2"></div>
+
+    <div class="container">
+        <header>
+            <div class="logo"><span>Bhim</span>Majhi</div>
+            <nav>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#editorial">Editorial</a>
+                <a href="#studio">Studio</a>
+            </nav>
+        </header>
+
+        <section class="hero-banner" id="editorial">
+            <img src="assets/images/photo1.jpg" alt="Bhim Majhi portrait photo" title="Bhim Majhi portrait photo">
+            <div class="banner-overlay">
+                <div class="banner-text">
+                    <h2><strong>Bhim</strong> Majhi</h2>
+                    <div class="meta">
+                        <span><i class="fas fa-circle" style="font-size: 0.4rem; color: #38bdf8;"></i> Portrait · 2026</span>
+                        <span><i class="fas fa-tag"></i> #smartalone</span>
+                        <span><i class="fas fa-camera"></i> 50mm · f/2.8</span>
+                    </div>
+                </div>
+                <div class="banner-tag">
+                    <i class="fas fa-arrow-right"></i> featured editorial
+                </div>
+            </div>
+            <button class="like-btn hero-like" onclick="toggleLike(this)" data-post-id="hero-main" aria-label="Like">
+                <i class="fas fa-heart"></i>
+                <span class="like-count">0</span>
+            </button>
+        </section>
+
+        <section class="gallery-section" id="portfolio">
+            <div class="section-header">
+                <h2 class="section-title">More <strong>Frames</strong></h2>
+                <span class="section-sub" id="seeAllBtn" role="button" tabindex="0" style="cursor:pointer;" onclick="document.querySelector('.gallery-grid').scrollIntoView({behavior:'smooth',block:'start'})" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}"><i class="fas fa-arrow-right"></i> See All</span>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-card">
+                    <img src="assets/images/photo2.jpg" alt="Bhim Majhi rooftop photo" title="Bhim Majhi rooftop photo">
+                    <div class="card-overlay">
+                        <h3>Rooftop View</h3>
+                        <div class="card-meta">Portrait · 2026</div>
+                        <span class="card-tag">#sunset</span>
+                    </div>
+                    <button class="like-btn card-like" onclick="toggleLike(this)" data-post-id="card-rooftop" aria-label="Like">
+                        <i class="fas fa-heart"></i>
+                        <span class="like-count">0</span>
+                    </button>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&auto=format&fit=crop" alt="Neon Dusk cinematic photo" title="Neon Dusk cinematic photo">
+                    <div class="card-overlay">
+                        <h3>Neon Dusk</h3>
+                        <div class="card-meta">Night · 2026</div>
+                        <span class="card-tag">#cinematic</span>
+                    </div>
+                    <button class="like-btn card-like" onclick="toggleLike(this)" data-post-id="card-neondusk" aria-label="Like">
+                        <i class="fas fa-heart"></i>
+                        <span class="like-count">0</span>
+                    </button>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&auto=format&fit=crop" alt="Earth and Sky landscape photo" title="Earth and Sky landscape photo">
+                    <div class="card-overlay">
+                        <h3>Earth &amp; Sky</h3>
+                        <div class="card-meta">Landscape · 2025</div>
+                        <span class="card-tag">#minimal</span>
+                    </div>
+                    <button class="like-btn card-like" onclick="toggleLike(this)" data-post-id="card-earthsky" aria-label="Like">
+                        <i class="fas fa-heart"></i>
+                        <span class="like-count">0</span>
+                    </button>
+                </div>
+
+                <!-- Firebase posts are inserted here automatically. -->
+                <div id="firebaseGallery" class="firebase-gallery-contents"></div>
+            </div>
+        </section>
+
+        <div class="testimonial" id="studio">
+            <div class="line"></div>
+            <blockquote>— HELLO FRINDS</blockquote>
+            <cite>— A. Bhim Majhi</cite>
+
+            <div class="social-container">
+                <div class="social-links-3d">
+                    <a href="mailto:cutenrml@gmail.com" target="_blank" class="gmail" title="Gmail">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://facebook.com/Thesmartalone" target="_blank" class="fb" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://instagram.com/smrtalone" target="_blank" class="insta" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://whatsapp.com/channel/0029Vb6aYpiDOQIZlWFEYb0c" target="_blank" class="wa" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/particles.js"></script>
+    <script type="module" src="js/app.js"></script>
+
+</body>
+</html>
