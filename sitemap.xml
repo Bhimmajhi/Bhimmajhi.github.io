@@ -9,15 +9,4 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- Aur pages hon to unhe neeche aise add karein (ek url block per page) -->
-  <!--
-  <url>
-    <loc>https://bhimmajhi.github.io/about</loc>
-    <lastmod>2026-11-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  -->
-
 </urlset>
