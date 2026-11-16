@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import GalleryCard from '../components/GalleryCard.astro';
+import Testimonial from '../components/Testimonial.astro';
+
+// '/' on GitHub Pages (user site at bhimmajhi.github.io). Local asset paths use it.
+const base = import.meta.env.BASE_URL;
+
+const cards = [
+  {
+    postId: 'card-rooftop',
+    image: `${base}assets/images/photo2.jpg`,
+    alt: 'Bhim Majhi rooftop photo',
+    title: 'Rooftop View',
+    meta: 'Portrait · 2026',
+    tag: '#sunset',
+  },
+  {
+    postId: 'card-neondusk',
+    image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&auto=format&fit=crop',
+    alt: 'Neon Dusk cinematic photo',
+    title: 'Neon Dusk',
+    meta: 'Night · 2026',
+    tag: '#cinematic',
+  },
+  {
+    postId: 'card-earthsky',
+    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&auto=format&fit=crop',
+    alt: 'Earth and Sky landscape photo',
+    title: 'Earth & Sky',
+    meta: 'Landscape · 2025',
+    tag: '#minimal',
+  },
+];
+---
+<Layout title="Bhim Majhi">
+  <Header />
+
+  <Hero image={`${base}assets/images/photo1.jpg`} alt="Bhim Majhi portrait photo" postId="hero-main" />
+
+  <section class="gallery-section" id="portfolio">
+    <div class="section-header">
+      <h2 class="section-title">More <strong>Frames</strong></h2>
+      <span class="section-sub" id="seeAllBtn" role="button" tabindex="0" style="cursor:pointer;" onclick="document.querySelector('.gallery-grid').scrollIntoView({behavior:'smooth',block:'start'})" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}"><i class="fas fa-arrow-right"></i> See All</span>
+    </div>
+
+    <div class="gallery-grid">
+      {cards.map((c) => <GalleryCard {...c} />)}
+
+      <!-- Firebase posts are inserted here automatically. -->
+      <div id="firebaseGallery" class="firebase-gallery-contents"></div>
+    </div>
+  </section>
+
+  <Testimonial />
+
+  <!-- Same scripts as before, served unchanged from public/js -->
+  <script is:inline src={`${base}js/particles.js`}></script>
+  <script is:inline type="module" src={`${base}js/app.js`}></script>
+</Layout>

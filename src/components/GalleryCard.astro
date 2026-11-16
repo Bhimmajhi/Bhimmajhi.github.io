@@ -1,0 +1,19 @@
+---
+import type { GalleryItem } from '../types';
+
+type Props = GalleryItem;
+
+const { postId, image, alt, title, meta, tag } = Astro.props;
+---
+<div class="gallery-card">
+  <img src={image} alt={alt} title={alt} loading="lazy">
+  <div class="card-overlay">
+    <h3>{title}</h3>
+    <div class="card-meta">{meta}</div>
+    <span class="card-tag">{tag}</span>
+  </div>
+  <button class="like-btn card-like" onclick="toggleLike(this)" data-post-id={postId} aria-label="Like">
+    <i class="fas fa-heart"></i>
+    <span class="like-count">0</span>
+  </button>
+</div>

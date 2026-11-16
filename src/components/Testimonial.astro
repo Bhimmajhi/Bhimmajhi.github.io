@@ -1,0 +1,25 @@
+---
+import type { SocialLink } from '../types';
+
+const socials: SocialLink[] = [
+  { href: 'mailto:cutenrml@gmail.com', cls: 'gmail', title: 'Gmail', icon: 'fas fa-envelope' },
+  { href: 'https://facebook.com/Thesmartalone', cls: 'fb', title: 'Facebook', icon: 'fab fa-facebook-f' },
+  { href: 'https://instagram.com/smrtalone', cls: 'insta', title: 'Instagram', icon: 'fab fa-instagram' },
+  { href: 'https://whatsapp.com/channel/0029Vb6aYpiDOQIZlWFEYb0c', cls: 'wa', title: 'WhatsApp', icon: 'fab fa-whatsapp' },
+];
+---
+<div class="testimonial" id="studio">
+  <div class="line"></div>
+  <blockquote>— HELLO FRIENDS</blockquote>
+  <cite>— A. Bhim Majhi</cite>
+
+  <div class="social-container">
+    <div class="social-links-3d">
+      {socials.map((s) => (
+        <a href={s.href} target="_blank" class={s.cls} title={s.title}>
+          <i class={s.icon}></i>
+        </a>
+      ))}
+    </div>
+  </div>
+</div>

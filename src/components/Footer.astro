@@ -1,0 +1,44 @@
+---
+const repo = 'bhimmajhi/bhimmajhi.github.io';
+const repoUrl = `https://github.com/${repo}`;
+const owner = 'Bhim Majhi';
+---
+<footer class="site-footer">
+  <p class="footer-credit">Designed &amp; Built by {owner}</p>
+
+  <div class="footer-stats">
+    <a href={repoUrl} target="_blank" rel="noopener noreferrer" class="footer-stat" title="GitHub stars">
+      <i class="fa-regular fa-star" aria-hidden="true"></i>
+      <span id="gh-stars" aria-label="Stars">–</span>
+    </a>
+    <a href={`${repoUrl}/fork`} target="_blank" rel="noopener noreferrer" class="footer-stat" title="GitHub forks">
+      <i class="fa-solid fa-code-branch" aria-hidden="true"></i>
+      <span id="gh-forks" aria-label="Forks">–</span>
+    </a>
+  </div>
+</footer>
+
+<script>
+  const repo = 'bhimmajhi/bhimmajhi.github.io';
+  const format = (n: number) => n.toLocaleString('en-US');
+
+  async function loadRepoStats() {
+    try {
+      const res = await fetch(`https://api.github.com/repos/${repo}`, {
+        headers: { Accept: 'application/vnd.github+json' },
+      });
+      if (!res.ok) throw new Error(`GitHub API responded with ${res.status}`);
+
+      const data = await res.json();
+      const starsEl = document.getElementById('gh-stars');
+      const forksEl = document.getElementById('gh-forks');
+
+      if (starsEl) starsEl.textContent = format(data.stargazers_count);
+      if (forksEl) forksEl.textContent = format(data.forks_count);
+    } catch (err) {
+      console.warn('Could not load GitHub stats:', err);
+    }
+  }
+
+  loadRepoStats();
+</script>

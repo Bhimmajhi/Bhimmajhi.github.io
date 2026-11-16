@@ -1,0 +1,29 @@
+---
+interface Props {
+  image: string;
+  alt: string;
+  postId: string;
+}
+
+const { image, alt, postId } = Astro.props;
+---
+<section class="hero-banner" id="editorial">
+  <img src={image} alt={alt} title={alt}>
+  <div class="banner-overlay">
+    <div class="banner-text">
+      <h2><strong>Bhim</strong> Majhi</h2>
+      <div class="meta">
+        <span><i class="fas fa-circle" style="font-size: 0.4rem; color: #38bdf8;"></i> Portrait · 2026</span>
+        <span><i class="fas fa-tag"></i> #smrtalone</span>
+        <span><i class="fas fa-camera"></i> 50mm · f/2.8</span>
+      </div>
+    </div>
+    <div class="banner-tag">
+      <i class="fas fa-arrow-right"></i> featured editorial
+    </div>
+  </div>
+  <button class="like-btn hero-like" onclick="toggleLike(this)" data-post-id={postId} aria-label="Like">
+    <i class="fas fa-heart"></i>
+    <span class="like-count">0</span>
+  </button>
+</section>
