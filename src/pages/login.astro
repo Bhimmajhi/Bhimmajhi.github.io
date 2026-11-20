@@ -5,8 +5,26 @@ import '../styles/login.css';
 const base = import.meta.env.BASE_URL; // '/' on GitHub Pages (bhimmajhi.github.io)
 ---
 <Layout title="Login · Bhim Majhi">
-  <main class="login-wrap">
-    <a class="login-logo" href={base}><span>Bhim</span>Majhi</a>
+  <header>
+    <a class="logo" href={base}><span>Bhim</span>Majhi</a>
+    <nav>
+      <a href={base}>Home</a>
+      <a href={`${base}#portfolio`}>Portfolio</a>
+      <a href={`${base}#studio`}>Studio</a>
+    </nav>
+  </header>
+
+  <main class="login-layout">
+    <section class="login-visual" aria-hidden="true">
+      <img src={`${base}assets/images/photo1.jpg`} alt="" loading="eager">
+      <div class="login-visual-overlay">
+        <h2><strong>Bhim</strong> Majhi</h2>
+        <div class="login-visual-meta">
+          <span><i class="fas fa-camera"></i> Portrait · 2026</span>
+          <span><i class="fas fa-tag"></i> #smrtalone</span>
+        </div>
+      </div>
+    </section>
 
     <section class="login-card" data-home={base}>
       <div class="login-head">
