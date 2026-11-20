@@ -33,6 +33,9 @@ const auth = getAuth(app);
 
 const db = getFirestore(app);
 
+// Only this account may use the admin page (same email as the Firestore rules).
+const ADMIN_EMAIL = "cutenrml@gmail.com";
+
 
 // ========================================
 // ELEMENTS
@@ -142,6 +145,13 @@ document
 // ========================================
 
 onAuthStateChanged(auth, user => {
+
+  // Any other signed-in account is signed out here.
+  if (user && user.email !== ADMIN_EMAIL) {
+    loginMsg.textContent = "Ye account admin nahi hai.";
+    signOut(auth);
+    return;
+  }
 
   if (user) {
 
