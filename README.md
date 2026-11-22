@@ -1,11 +1,10 @@
 <div align="center">
-  <img alt="Logo" src="https://raw.githubusercontent.com/bhimmajhi/bhimmajhi/main/src/images/logo.png" width="100" />
-</div>
-<h1 align="center">
-  Bhim Majhi
-</h1>
-(https://trendshift.io/api/badge/repositories/82054)
-<p align="center">
+
+# Bhim Majhi — Photo Portfolio
+
+<a href="https://trendshift.io/repositories/82054">
+  <img src="https://trendshift.io/api/badge/repositories/82054" alt="bhimmajhi/bhimmajhi.github.io - Trendshift" width="250" height="55"/>
+</a>
 
 ![Astro](https://img.shields.io/badge/Astro-5-FF5D01?logo=astro&logoColor=white)
 ![Firebase](https://img.shields.io/badge/Firebase-Firestore%20%2B%20Auth-FFCA28?logo=firebase&logoColor=black)
@@ -15,6 +14,8 @@
 **Live site:** https://bhimmajhi.github.io
 
 A photography portfolio built with [Astro](https://astro.build). Photos and short videos are uploaded from a private admin page, stored on Cloudinary, saved to Firebase Firestore, and shown in a responsive gallery with likes and per-photo SEO fields.
+
+</div>
 
 ---
 
@@ -174,7 +175,7 @@ After a deploy, do a hard refresh (Ctrl+Shift+R on desktop, or clear the browser
 | Fonts                       | `public/assets/fonts/` and `@font-face` in `style.css` |
 | Header links                | `src/components/Header.astro`                      |
 | Testimonial text            | `src/components/Testimonial.astro`                 |
-| Footer credit              | `src/components/Footer.astro`                      |
+| Footer credit               | `src/components/Footer.astro`                      |
 | Homepage sections           | `src/pages/index.astro`                            |
 
 ---
@@ -199,5 +200,3 @@ After a deploy, do a hard refresh (Ctrl+Shift+R on desktop, or clear the browser
 Released under the [MIT License](LICENSE).
 
 Copyright (c) 2026 Smart Alone | Bhim majhi
-
-<a href="https://trendshift.io/repositories/82054?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-82054" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/82054" alt="morluto%2Frea | Trendshift" width="250" height="55"/></a>
