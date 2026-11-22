@@ -3,10 +3,10 @@ import type { GalleryItem } from '../types';
 
 type Props = GalleryItem;
 
-const { postId, image, alt, title, meta, tag } = Astro.props;
+const { postId, image, alt, title, meta, tag, width, height } = Astro.props;
 ---
 <div class="gallery-card">
-  <img src={image} alt={alt} title={alt} loading="lazy">
+  <img src={image} alt={alt} title={alt} width={width} height={height} loading="lazy">
   <div class="card-overlay">
     <h3>{title}</h3>
     <div class="card-meta">{meta}</div>
