@@ -1,3 +1,11 @@
+<div align="center">
+  <img alt="Logo" src="https://raw.githubusercontent.com/bhimmajhi/bhimmajhi/main/src/images/logo.png" width="100" />
+</div>
+<h1 align="center">
+  Bhim Majhi
+</h1>
+<p align="center">
+
 # Bhim Majhi — Photo Portfolio
 
 ![Astro](https://img.shields.io/badge/Astro-5-FF5D01?logo=astro&logoColor=white)
