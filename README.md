@@ -4,6 +4,7 @@
 <h1 align="center">
   Bhim Majhi
 </h1>
+(https://trendshift.io/api/badge/repositories/82054)
 <p align="center">
 
 ![Astro](https://img.shields.io/badge/Astro-5-FF5D01?logo=astro&logoColor=white)
