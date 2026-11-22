@@ -6,8 +6,6 @@
 </h1>
 <p align="center">
 
-# Bhim Majhi — Photo Portfolio
-
 ![Astro](https://img.shields.io/badge/Astro-5-FF5D01?logo=astro&logoColor=white)
 ![Firebase](https://img.shields.io/badge/Firebase-Firestore%20%2B%20Auth-FFCA28?logo=firebase&logoColor=black)
 ![Cloudinary](https://img.shields.io/badge/Media-Cloudinary-3448C5?logo=cloudinary&logoColor=white)
