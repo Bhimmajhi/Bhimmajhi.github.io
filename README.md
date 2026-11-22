@@ -198,3 +198,5 @@ After a deploy, do a hard refresh (Ctrl+Shift+R on desktop, or clear the browser
 Released under the [MIT License](LICENSE).
 
 Copyright (c) 2026 Smart Alone | Bhim majhi
+
+<a href="https://trendshift.io/repositories/82054?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-82054" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/82054" alt="morluto%2Frea | Trendshift" width="250" height="55"/></a>
