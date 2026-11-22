@@ -171,16 +171,9 @@ function createCard(postId, post) {
     ? post.createdAt.toDate().toLocaleDateString("en-IN", { year: "numeric", month: "short", day: "numeric" })
     : "2026";
 
-  // Original width/height (upload ke time save hua) — browser ko pehle se pata rahe ki kitni jagah chahiye,
-  // taaki image load hone par layout na hile. Load hone ke baad asli ratio hi use hota hai.
-  const w = Number(post.width) || 0;
-  const h = Number(post.height) || 0;
-  const sizeAttrs = w > 0 && h > 0 ? ` width="${w}" height="${h}"` : "";
-  const mediaUrl = escapeHTML(post.mediaUrl || "");
-
   const media = post.mediaType === "video"
-    ? `<video src="${mediaUrl}"${sizeAttrs} controls playsinline preload="metadata" title="${seoTitle}"></video>`
-    : `<img src="${mediaUrl}"${sizeAttrs} alt="${seoAlt}" title="${seoTitle}" loading="lazy">`;
+    ? `<video src="${post.mediaUrl}" controls playsinline preload="metadata" title="${seoTitle}"></video>`
+    : `<img src="${post.mediaUrl}" alt="${seoAlt}" title="${seoTitle}" loading="lazy">`;
 
   card.innerHTML = `
     ${media}
