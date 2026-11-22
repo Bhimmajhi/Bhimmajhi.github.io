@@ -1,6 +1,6 @@
 <div align="center">
 
-# Bhim Majhi — Photo Portfolio
+# Bhim Majhi
 
 <a href="https://trendshift.io/repositories/82054">
   <img src="https://trendshift.io/api/badge/repositories/82054" alt="bhimmajhi/bhimmajhi.github.io - Trendshift" width="250" height="55"/>
