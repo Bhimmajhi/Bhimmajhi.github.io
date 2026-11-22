@@ -5,9 +5,6 @@ export interface GalleryItem {
   title: string;
   meta: string;
   tag: string;
-  // Optional original size — photo ko usi ratio me dikhane ke liye
-  width?: number;
-  height?: number;
 }
 
 export type SocialClass = 'gmail' | 'fb' | 'insta' | 'wa';
